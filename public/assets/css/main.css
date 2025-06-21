@@ -648,7 +648,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 87%;
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -885,144 +885,141 @@
     color: var(--contrast-color);
     background: var(--accent-color);
   }
-  
-  /*--------------------------------------------------------------
-  /* About Section */
-  .about {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-  }
-  
-  .section-title span {
-    color: var(--accent-color);
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-  
-  .section-title .divider {
-    width: 80px;
-    height: 3px;
-    background: var(--accent-color);
-    margin: 15px auto 20px;
-  }
-  
-  .about-img {
-    position: relative;
-  }
-  
-  .about-img .experience-badge {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    text-align: center;
-    width: 120px;
-  }
-  
-  .feature-icon {
-    transition: all 0.3s ease;
-  }
-  
-  .feature-item:hover .feature-icon {
-    background-color: var(--accent-color) !important;
-    color: white !important;
-    transform: translateY(-5px);
-  }
-  
-  /* .btn-accent {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-accent:hover {
-    background-color: var(--accent-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  } */
-  
-  /* Animation */
-  [data-aos] {
-    transition: all 0.8s ease;
-  }
-  
-  [data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  
-  [data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Define your color variables */
-  :root {
-    --accent-color: #005b63;      /* Biru kehijauan gelap (warna utama logo) */
-    --accent-dark: #003f44;       /* Lebih gelap untuk hover/tekan */
-    --accent-light: #e0f5f7;      /* Versi sangat terang, cocok untuk latar belakang */
-    --contrast-color: #ffffff;    /* Putih, kontras dengan warna utama */
-    --surface-color: #f8f9fa;     /* Latar permukaan umum */
-    --default-color: #444444;     /* Warna teks standar */
-  }
-  
-  #menu {
-    background-color: #e67e22; /* Oranye hangat */
-    color: white;
-    border: none;
-    transition: all 0.3s;
-  }
-  
-  #menu:hover {
-    background-color: #d35400; /* Oranye lebih gelap */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  /*--------------------------------------------------------------
-  # Stats Section
-  --------------------------------------------------------------*/
-  .stats {
-    padding: 10px 0;
-  }
-  
-  .stats .stats-item {
-    padding: 30px;
-    width: 100%;
-  }
-  
-  .stats .stats-item span {
-    color: var(--heading-color);
-    font-size: 48px;
-    display: block;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  
-  .stats .stats-item span:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--accent-color);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  
-  .stats .stats-item p {
-    color: color-mix(in srgb, var(--default-color), transparent 40%);
-    padding: 0;
-    margin: 0;
-    font-family: var(--heading-font);
-    font-weight: 500;
-  }
+      /* About Section */
+      .about {
+        padding: 100px 0;
+        background-color: #f8f9fa;
+      }
+      
+      .section-title span {
+        color: #003f44;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      
+      .section-title h2 {
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #003f44;
+        bottom: 0;
+        left: 5%;
+        transform: translateX(-50%);
+      }
+      
+      .about-img {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0,63,68,0.1);
+       
+      }
+      .logo-img-wwd{
+        width: 100%;
+      }
+      .experience-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        text-align: center;
+        width: 140px;
+        background-color: #003f44;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      
+      .feature-icon {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .feature-item:hover .feature-icon {
+        background-color: #003f44 !important;
+        color: white !important;
+        transform: translateY(-5px) rotate(-5deg);
+      }
+      
+      /* Stats Section */
+      .stats {
+        padding: 80px 0;
+        background-color: #003f44;
+        color: white;
+      }
+      
+      .stats .stats-item {
+        padding: 40px 20px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(5px);
+        transition: all 0.4s ease;
+      }
+    
+      .stats .stats-item:hover {
+        transform: translateY(-10px);
+        background: rgba(255,255,255,0.15);
+      }
+      
+      .stats .stats-item span {
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: block;
+      }
+      
+      .stats .stats-item p {
+        color: rgba(255,255,255,0.8);
+        font-size: 1.1rem;
+        margin: 0;
+        font-weight: 500;
+      }
+      
+      /* Button Styles */
+      .btn-velvorfa {
+        background-color: #003f44;
+        color: white;
+        border: 2px solid #003f44;
+        padding: 12px 35px;
+        border-radius: 50px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.4s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .btn-velvorfa:hover {
+        background-color: transparent;
+        color: #003f44;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,63,68,0.2);
+      }
+      
+      .btn-velvorfa i {
+        transition: transform 0.3s ease;
+      }
+      
+      .btn-velvorfa:hover i {
+        transform: translateX(5px);
+      }
   
   /*--------------------------------------------------------------
   # Services Section
