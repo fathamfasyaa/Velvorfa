@@ -6,89 +6,75 @@
 @section('keywords', 'keywords, for, home, page')
 
 @section('content')
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-carousel">
-                <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
 
-                    <div class="carousel-inner">
-                        <!-- Slide 1 - Enhanced -->
-                        <div class="carousel-item active">
-                            <div class="carousel-bg floating" style="background-image: url('/assets/img/baraka.jpeg');">
-                            </div>
-                            <div class="container">
-                                <div class="carousel-content">
-                                    <h1 class="hero-title">Solusi Digital <span class="texthero shadow-sm">Modern</span>
-                                        untuk Bisnis Anda</h1>
-                                    <p class="hero-text">Kami menghadirkan website profesional dengan performa optimal dan
-                                        desain yang memukau, membantu bisnis Anda tumbuh di era digital.</p>
-                                    <div class="hero-buttons">
-                                        <a href="#" class="btn btn-primary">Lihat Portofolio</a>
-                                        <a href="#" class="btn btn-outline-light">Konsultasi Gratis</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Slide 2 - Enhanced -->
-                        <div class="carousel-item">
-                            <div class="carousel-bg floating" style="background-image: url('/assets/img/baraka2.jpeg');">
-                            </div>
-                            <div class="container">
-                                <div class="carousel-content">
-                                    <h1 class="hero-title">Transformasi <span class="texthero shadow-sm">Digital</span>
-                                        untuk Masa Depan</h1>
-                                    <p class="hero-text">Bangun kehadiran digital yang powerful dengan teknologi terkini dan
-                                        strategi yang terukur untuk kesuksesan bisnis Anda.</p>
-                                    <div class="hero-buttons">
-                                        <a href="#" class="btn btn-primary">Mulai Sekarang</a>
-                                        <a href="#" class="btn btn-outline-light">Pelajari Lebih</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+   
+  <main class="main">
 
-                    <!-- Navigation Arrows - Custom Version -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
-                        aria-label="Previous">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
-                        aria-label="Next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section" style="background: url('{{ asset('assets/img/hero-bg.png') }}') top center no-repeat;">
+    
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+              <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="{{ asset('assets/img/11060576.jpg') }}"
+            class="img-fluid animated">
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Gambar Ilustrasi -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="{{ asset('assets/img/aboutvelvorfa.png') }}" alt="Tentang Velvorfa"
+                        class="img-fluid rounded shadow-sm">
+                </div>
+
+                <!-- Konten Teks -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="badge bg-light text-dark mb-2" style="font-weight: 500;">Tentang Velvorfa</span>
+                    <h2 class="fw-bold mb-4" style="color: #0F4C5C;">Kami Bukan Sekadar Developer,<br> Kami Mitra Digital
+                        Anda.</h2>
+                    <p class="text-muted mb-4">
+                        Velvorfa hadir sebagai solusi teknologi kreatif bagi UMKM dan bisnis lokal yang ingin bertumbuh di
+                        era digital.
+                        Kami percaya bahwa website bukan hanya soal tampilan, tapi juga alat strategis untuk membangun
+                        kepercayaan dan meningkatkan penjualan.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Tim muda, adaptif, dan berpengalaman
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Fokus pada hasil nyata, bukan hanya kode
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Komitmen jangka panjang untuk klien lokal
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-velvorfa mt-3">Hubungi Kami</a>
                 </div>
             </div>
-
-            <!-- Floating Elements (Optional) -->
-            <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden"
-                style="z-index: 1; pointer-events: none;">
-                <div class="position-absolute"
-                    style="top: 20%; left: 10%; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; animation: float 8s ease-in-out infinite 1s;">
-                </div>
-                <div class="position-absolute"
-                    style="top: 60%; left: 80%; width: 60px; height: 60px; background: rgba(255,255,255,0.08); border-radius: 50%; animation: float 7s ease-in-out infinite 2s;">
-                </div>
-                <div class="position-absolute"
-                    style="top: 30%; left: 70%; width: 30px; height: 30px; background: rgba(255,255,255,0.15); border-radius: 50%; animation: float 9s ease-in-out infinite 0.5s;">
-                </div>
-            </div>
-        </section>
-    </main>
-
-
+        </div>
+    </section>
     <!-- About Section -->
-    <section id="about" class="about section">
+
+    <section id="layanan-velvorfa" class="layanan-velvorfa section">
         <div class="container">
             <!-- Section Title -->
             <div class="section-title text-center mb-1" data-aos="fade-up">
@@ -100,11 +86,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                     <div class="about-img position-relative" style="margin-bottom: 80px;">
-                        <img src="{{ asset('/assets/img/whatwedo.png') }}" alt="Velvorfa Logo" class="logo-img-wwd">
-                        <div class="experience-badge">
-                            <h3 class="mb-0">10+</h3>
-                            <p class="mb-0">Tahun Inovasi</p>
-                        </div>
+                        <img src="{{ asset('/assets/img/layanan.jpg') }}" alt="Velvorfa Logo" class="logo-img-wwd">
                     </div>
                 </div>
 
@@ -113,7 +95,8 @@
                         <h3 class="fw-bold mb-4">Membangun Masa Depan Digital Bisnis Anda</h3>
                         <div class="features-list">
                             <div class="feature-item d-flex mb-4">
-                                <div class="feature-icon rounded-3 me-4" style="background-color: #e0f5f7; color: #003f44;">
+                                <div class="feature-icon rounded-3 me-4"
+                                    style="background-color: #e0f5f7; color: #003f44;">
                                     <i class="bi bi-globe fs-2"></i>
                                 </div>
                                 <div>
@@ -157,7 +140,7 @@
 
 
     <!-- What We Do Section -->
-    <section id="what-we-do" class="what-we-do section" style="background-color: #f8f9fa;">
+    <section id="what-we-do" class="what-we-do section">
 
         <!-- Section Title -->
         <div class="container section-title pt-5" data-aos="fade-up">
@@ -226,12 +209,4 @@
             </div>
         </div>
     </section><!-- /What We Do Section -->
-
-
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 @endsection

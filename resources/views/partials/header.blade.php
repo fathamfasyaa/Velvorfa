@@ -1,4 +1,4 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header header-transparent d-flex align-items-center sticky-top">
   <div class="container-fluid d-flex align-items-center justify-content-between position-relative">
 
     <!-- Logo -->
