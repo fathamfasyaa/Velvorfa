@@ -1716,3 +1716,215 @@ section,
     margin-right: 8px;
     color: var(--accent-color);
 }
+
+
+/* /* tentang kami dekripsi */
+ *{
+            font-family: 'Poppins', sans-serif;
+        }
+        
+
+ .custom-breadcrumb {
+    background: linear-gradient(135deg, rgba(90, 130, 126, 0.1), rgba(90, 130, 126, 0.05));
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item {
+    color: #5A827E;
+    font-weight: 500;
+}
+
+.breadcrumb-item.active {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Background Section */
+#background {
+    background: linear-gradient(135deg, #5A827E 0%, #4a6b67 50%, #3d5654 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+}
+
+#background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Logo Animation */
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.floating-logo {
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.floating-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+}
+
+/* Pulse Animation for Logo Background */
+.logo-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+}
+
+/* Text Animations */
+.subtitle {
+    position: relative;
+    overflow: hidden;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    animation: underline 2s ease-in-out infinite;
+}
+
+@keyframes underline {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+.main-title {
+    background: linear-gradient(45deg, #ffffff, #e8f5e8, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Floating Particles */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.particle:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    top: 20%;
+    left: 10%;
+    animation: floatParticle1 8s linear infinite;
+}
+
+.particle:nth-child(2) {
+    width: 6px;
+    height: 6px;
+    top: 60%;
+    left: 80%;
+    animation: floatParticle2 6s linear infinite;
+}
+
+.particle:nth-child(3) {
+    width: 3px;
+    height: 3px;
+    top: 80%;
+    left: 20%;
+    animation: floatParticle3 10s linear infinite;
+}
+
+@keyframes floatParticle1 {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0; }
+    10%, 90% { opacity: 1; }
+    50% { transform: translateY(-100px) translateX(50px); }
+}
+
+@keyframes floatParticle2 {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0; }
+    10%, 90% { opacity: 1; }
+    50% { transform: translateY(-80px) translateX(-30px); }
+}
+
+@keyframes floatParticle3 {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0; }
+    10%, 90% { opacity: 1; }
+    50% { transform: translateY(-120px) translateX(80px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .floating-logo {
+        max-width: 60px !important;
+    }
+    
+    .logo-glow {
+        width: 80px;
+        height: 80px;
+    }
+}

@@ -10,19 +10,10 @@
     <div class="nav-wrapper position-absolute start-50 translate-middle-x d-none d-xl-block">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">Layanan Kami</a></li>
-          <li><a href="#services">Layanan</a></li>
+          <li><a href="#hero" class="active">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Layanan Kami</a></li>
           <li><a href="#portfolio">Portofolio</a></li>
-          <li><a href="#team">Tim</a></li>
-          <li class="dropdown">
-            <a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Testimoni</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
       </nav>

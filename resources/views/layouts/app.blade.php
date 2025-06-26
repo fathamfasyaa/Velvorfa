@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
-
+  
+  <!-- AOS JS -->
     <!-- Vendor CSS Files (semua menggunakan helper asset) -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -59,7 +60,11 @@
     <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
@@ -97,7 +102,40 @@
     </script>
         
 
-    
+        <script>
+          // Initialize AOS
+          AOS.init({
+              duration: 1000,
+              easing: 'ease-in-out',
+              once: false,
+              mirror: true
+          });
+          
+          // Add extra hover effects
+          document.addEventListener('DOMContentLoaded', function() {
+              const logo = document.querySelector('.floating-logo');
+              const logoContainer = document.querySelector('.logo-container');
+              
+              // Add click interaction
+              logo.addEventListener('click', function() {
+                  this.style.animation = 'none';
+                  setTimeout(() => {
+                      this.style.animation = 'float 3s ease-in-out infinite';
+                  }, 100);
+              });
+              
+              // Parallax effect for particles on scroll
+              window.addEventListener('scroll', function() {
+                  const scrolled = window.pageYOffset;
+                  const particles = document.querySelectorAll('.particle');
+                  
+                  particles.forEach((particle, index) => {
+                      const speed = (index + 1) * 0.5;
+                      particle.style.transform = `translateY(${scrolled * speed}px)`;
+                  });
+              });
+          });
+      </script>
 </body>
 
 </html>
