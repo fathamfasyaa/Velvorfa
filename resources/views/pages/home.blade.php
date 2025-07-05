@@ -16,7 +16,8 @@
             style="background: url('{{ asset('assets/img/hero-bg.png') }}') top center no-repeat;">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" style="padding-bottom: 80px">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                        style="padding-bottom: 80px">
                         <h1 data-aos="fade-up">Solusi Digital Kreatif untuk Bisnis Masa Kini</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Velvorfa adalah mitra terpercaya dalam membangun website
                             profesional, modern, dan responsif untuk menunjang pertumbuhan bisnis Anda.</p>
@@ -29,7 +30,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="{{ asset('assets/img/11060576.jpg') }}" class="img-fluid animated">
+                        <img src="{{ asset('assets/img/imghero.png') }}" class="img-fluid animated">
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                         </ul>
                         <a href="{{ route('tentang') }}" class="btn btn-velvorfa mt-3">
                             Pelajari Lebih Lanjut <i class="bi bi-arrow-right ms-2"></i>
-                          </a>                          
+                        </a>
                     </div>
 
                 </div>
@@ -80,10 +81,10 @@
         <!-- Akhir About Section -->
 
         {{-- Tentang Kami --}}
-        <section id="what-we-do" class="what-we-do section">
+        <section id="what-we-do" class="what-we-do section pt-5">
 
             <!-- Section Title -->
-            <div class="container section-title pt-5" data-aos="fade-up">
+            <div class="container section-title pt-4" data-aos="fade-up">
                 <h2 style="color: #0F4C5C;">Layanan Kami</h2>
                 <p>Transformasi digital dimulai dari sini. Kami menghadirkan solusi website profesional untuk mengangkat
                     brand
@@ -145,7 +146,7 @@
                                     <p style="text-align: center;">Layanan perawatan website berkala untuk performa optimal
                                     </p>
                                 </div>
-                            </div> 
+                            </div>
 
                         </div>
                     </div>
@@ -158,8 +159,7 @@
 
 
         {{-- Portfolio --}}
-
-        <section id="layanan-velvorfa" class="layanan-velvorfa section">
+        <section id="layanan-velvorfa" class="layanan-velvorfa section pt-5">
             <div class="container">
                 <!-- Section Title -->
                 <div class="section-title text-center mb-1" data-aos="fade-up">
@@ -222,4 +222,148 @@
                 </div>
             </div>
         </section>
+
+
+        {{-- KONTAK --}}
+        <div class="container py-5">
+            <h2 class="text-center mb-5" style="color: #0F4C5C;">Kontak</h2>
+
+            @if (session('success'))
+                <div class="alert alert-success text-center">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            <div class="row g-4">
+                <!-- Kolom Kiri: Informasi Kontak -->
+                <div class="col-lg-6">
+                    <div class="contact-info h-100">
+                        <h4 class="mb-4" style="color: #0F4C5C;">Informasi Kontak</h4>
+
+                        <!-- Alamat -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-map-marker-alt" style="color: #0F4C5C; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Alamat</h6>
+                                    <p class="text-muted mb-0">
+                                        Jl. Contoh No. 123<br>
+                                        Padalarang, Bandung Barat<br>
+                                        Jawa Barat 40553
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Telepon -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-phone" style="color: #0F4C5C; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Telepon</h6>
+                                    <p class="text-muted mb-0">
+                                        <a href="tel:+6281234567890" class="text-decoration-none text-muted">
+                                            +62 812-3456-7890
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-envelope" style="color: #0F4C5C; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Email</h6>
+                                    <p class="text-muted mb-0">
+                                        <a href="mailto:info@perusahaan.com" class="text-decoration-none text-muted">
+                                            info@perusahaan.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jam Operasional -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-clock" style="color: #0F4C5C; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Jam Operasional</h6>
+                                    <p class="text-muted mb-0">
+                                        Senin - Jumat: 08:00 - 17:00<br>
+                                        Sabtu - Minggu: Tutup
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Media Sosial -->
+                        <div class="contact-item">
+                            <h6 class="mb-3">Ikuti Kami</h6>
+                            <div class="social-links">
+                                <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
+                                    <i class="fab fa-facebook fa-lg"></i>
+                                </a>
+                                <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                                <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" style="color: #0F4C5C;">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Form Hubungi Kami -->
+                <div class="col-lg-6">
+                    <div class="contact-form h-100">
+                        <h4 class="mb-4" style="color: #0F4C5C;">Hubungi Kami</h4>
+
+                        <form action="{{ route('kontak.kirim') }}" method="POST" class="g-3">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nama" class="form-label">Nama</label>
+                                    <input type="text" name="nama" id="nama" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subjek" class="form-label">Subjek</label>
+                                <input type="text" name="subjek" id="subjek" class="form-control" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="pesan" class="form-label">Pesan</label>
+                                <textarea name="pesan" id="pesan" class="form-control" rows="6" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-velvorfa px-4 py-2">
+                                    <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
     @endsection

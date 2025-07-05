@@ -2,7 +2,7 @@
   <div class="container-fluid d-flex align-items-center justify-content-between position-relative">
 
     <!-- Logo -->
-    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+    <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
       <img src="{{ asset('/assets/img/logovelvorfakecil.png') }}" alt="Velvorfa Logo" class="logo-img">
     </a>
 
@@ -11,9 +11,9 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Beranda</a></li>
-          <li><a href="#about">Tentang Kami</a></li>
-          <li><a href="#services">Layanan Kami</a></li>
-          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#about-us">Tentang Kami</a></li>
+          <li><a href="#what-we-do">Layanan Kami</a></li>
+          <li><a href="#layanan-velvorfa">Portofolio</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
       </nav>
@@ -22,7 +22,11 @@
     <!-- Mobile Nav (Hidden on xl) -->
     <nav id="navmenu" class="navmenu d-xl-none">
       <ul>
-        <!-- sama seperti atas -->
+        <li><a href="#hero" class="active">Beranda</a></li>
+        <li><a href="#about-us">Tentang Kami</a></li>
+        <li><a href="#what-we-do">Layanan Kami</a></li>
+        <li><a href="#layanan-velvorfa">Portofolio</a></li>
+        <li><a href="#contact">Kontak</a></li>
       </ul>
       <div class="header-social-links-mobile d-xl-none mt-3 px-3">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -42,3 +46,29 @@
     </div>
   </div>
 </header>
+
+<!-- Tambahkan script berikut sebelum tag </body> -->
+<script>
+  // Toggle mobile menu
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const body = document.body;
+
+  toggle.addEventListener('click', function () {
+    body.classList.toggle('mobile-nav-active');
+  });
+
+  // Aktifkan menu yang diklik (untuk semua navmenu)
+  document.querySelectorAll('#navmenu a').forEach(link => {
+    link.addEventListener('click', function () {
+      // Hapus semua class active dari semua link
+      document.querySelectorAll('#navmenu a').forEach(link => link.classList.remove('active'));
+      // Tambahkan ke link yang diklik
+      this.classList.add('active');
+
+      // Jika sedang di mobile, tutup menu setelah klik
+      if (document.body.classList.contains('mobile-nav-active')) {
+        document.body.classList.remove('mobile-nav-active');
+      }
+    });
+  });
+</script>

@@ -135,7 +135,25 @@
                   });
               });
           });
-      </script>
+      </script>\
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        
+        // Auto-hide toasts after 5 seconds
+        const toasts = document.querySelectorAll('.toast.show');
+        toasts.forEach(toast => {
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        });
+        
+        // Form validation
+        form.addEventListener('submit', function(e) {
+            form.classList.add('was-validated');
+        });
+    });
+    </script>
 </body>
 
 </html>

@@ -186,15 +186,7 @@ h6 {
 .header .logo img {
     max-height: 40px;
 }
-/* Transparent Header */
-/* .header-transparent {
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-  background-color: transparent;
-  transition: background-color 0.3s, box-shadow 0.3s;
-} */
+
 
 /* Social Media Style - Desktop */
 .header-social-links {
@@ -883,10 +875,7 @@ section,
     background: var(--accent-color);
 }
 /* Layanan Section (dulu about) */
-.layanan-velvorfa {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-}
+
 
 .layanan-velvorfa .section-title span {
     color: #003f44;
@@ -1927,4 +1916,267 @@ section,
         width: 80px;
         height: 80px;
     }
+}
+
+/* Kobntak */
+.contact-info, .contact-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-item {
+    padding: 0.5rem 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 76, 92, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.btn-velvorfa {
+    background-color: #0F4C5C;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 991px) {
+    .contact-info, .contact-form {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Work Process Section Styles */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #0F4C5C 0%, #1a6b7a 50%, #0F4C5C 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.work-step-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-step-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-step-card:hover::before {
+    opacity: 1;
+}
+
+.work-step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.step-icon-container {
+    position: relative;
+}
+
+.step-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.step-features .badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* Timeline Styles */
+.process-timeline {
+    padding: 2rem 0;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.5), #ffffff);
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-step {
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.timeline-step.active .timeline-dot {
+    background: #ffffff;
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.timeline-label {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.timeline-step.active .timeline-label {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.timeline-step:hover .timeline-dot {
+    transform: scale(1.2);
+    background: #ffffff;
+}
+
+.timeline-step:hover .timeline-label {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-step-card {
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-steps {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .timeline-line {
+        width: 4px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, #ffffff, rgba(255,255,255,0.5), #ffffff);
+    }
+    
+    .timeline-step {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .timeline-dot {
+        margin: 0 1rem 0 0;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.step-icon:hover {
+    animation: pulse 2s infinite;
 }
