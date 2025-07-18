@@ -22,9 +22,11 @@
                         <p data-aos="fade-up" data-aos-delay="100">Velvorfa adalah mitra terpercaya dalam membangun website
                             profesional, modern, dan responsif untuk menunjang pertumbuhan bisnis Anda.</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#about" class="btn-get-started">Pelajari Lebih Lanjut <i
-                                    class="bi bi-arrow-right"></i></a>
-                            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                            <a href="{{ route('portfolio') }}" target="_blank" class="btn-get-started">
+                                Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
+                            </a>
+                            
+                            <a href ="{{ route('portfolio') }}"
                                 class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
                                     class="bi bi-play-circle"></i><span>Lihat Portfolio</span></a>
                         </div>

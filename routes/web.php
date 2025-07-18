@@ -13,6 +13,10 @@ Route::get('/tentang-kami', function () {
     return view('pages.tentangkami');
 })->name('tentang');
 
+Route::get('/portfolio', function () {
+    return view('pages.portolio');
+})->name('portfolio');
+
 
 Route::get('/kontak', [ContactController::class, 'index'])->name('kontak');
 Route::post('/kontak', [ContactController::class, 'send'])->name('kontak.kirim');
