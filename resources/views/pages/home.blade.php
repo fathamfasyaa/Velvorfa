@@ -22,18 +22,27 @@
                         <p data-aos="fade-up" data-aos-delay="100">Velvorfa adalah mitra terpercaya dalam membangun website
                             profesional, modern, dan responsif untuk menunjang pertumbuhan bisnis Anda.</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="{{ route('portfolio') }}" target="_blank" class="btn-get-started">
+                            <a href="#" target="_blank" class="btn-get-started">
                                 Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
                             </a>
                             
-                            <a href ="{{ route('portfolio') }}"
+                            <a href ="#"
                                 class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
                                     class="bi bi-play-circle"></i><span>Lihat Portfolio</span></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="{{ asset('assets/img/imghero.png') }}" class="img-fluid animated">
-                    </div>
+                    @php
+                    $hero = \App\Models\HeroSection::first();
+                    $image = $hero && $hero->image
+                        ? asset('storage/' . $hero->image)
+                        : asset('assets/img/imghero.png');
+                @endphp
+                
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                    <img src="{{ $image }}" class="img-fluid animated">
+                </div>
+                
+                
                 </div>
             </div>
         </section>
@@ -161,70 +170,172 @@
 
 
         {{-- Portfolio --}}
-        <section id="layanan-velvorfa" class="layanan-velvorfa section pt-5">
-            <div class="container">
-                <!-- Section Title -->
-                <div class="section-title text-center mb-1" data-aos="fade-up">
-                    <span>Teknologi Terdepan</span>
-                    <h2 class="display-4 fw-bold">Velvorfa</h2>
-                    <p class="lead">Specialist Web Development & Digital Solutions</p>
-                </div>
-
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <div class="about-img position-relative" style="margin-bottom: 80px;">
-                            <img src="{{ asset('/assets/img/layanan.jpg') }}" alt="Velvorfa Logo" class="logo-img-wwd">
+        <section id="portfolio" class="portfolio section pt-5">
+        <div class="floating-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+    
+        <section class="portfolio-section">
+                <!-- Section Header -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2 style="color: #0F4C5C;">Portfolio</h2>
+                
+    
+                <!-- Filter Buttons -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <div class="filter-container d-flex justify-content-center flex-wrap gap-2">
+                            <button class="filter-btn active" data-filter="all">All Projects</button>
+                            <button class="filter-btn" data-filter="mobile">Mobile</button>
+                            <button class="filter-btn" data-filter="web">Website</button>
                         </div>
                     </div>
-
-                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                        <div class="about-content ps-lg-4">
-                            <h3 class="fw-bold mb-4">Membangun Masa Depan Digital Bisnis Anda</h3>
-                            <div class="features-list">
-                                <div class="feature-item d-flex mb-4">
-                                    <div class="feature-icon rounded-3 me-4"
-                                        style="background-color: #e0f5f7; color: #003f44;">
-                                        <i class="bi bi-globe fs-2"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="fw-semibold">Web Development</h4>
-                                        <p class="text-muted">Website performa tinggi dengan teknologi terkini</p>
-                                    </div>
-                                </div>
-
-                                <div class="feature-item d-flex mb-4">
-                                    <div class="feature-icon rounded-3 me-4"
-                                        style="background-color: #e0f5f7; color: #003f44;">
-                                        <i class="bi bi-phone fs-2"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="fw-semibold">Mobile Friendly</h4>
-                                        <p class="text-muted">Optimal di semua perangkat mobile</p>
-                                    </div>
-                                </div>
-
-                                <div class="feature-item d-flex mb-4">
-                                    <div class="feature-icon rounded-3 me-4"
-                                        style="background-color: #e0f5f7; color: #003f44;">
-                                        <i class="bi bi-graph-up fs-2"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="fw-semibold">SEO Optimized</h4>
-                                        <p class="text-muted">Peringkat terbaik di mesin pencari</p>
-                                    </div>
+                </div>
+    
+                <!-- Portfolio Grid -->
+                <div class="row g-4" id="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
                                 </div>
                             </div>
-
-
-                            <a href="#portfolio" class="btn btn-velvorfa">
-                                Lihat Portofolio Kami <i class="bi bi-arrow-right"></i>
-                            </a>
+                            <div class="card-content">
+                                <span class="card-category">Website</span>
+                                <h3 class="card-title">EcoTech Platform</h3>
+                                <p class="card-description">Sustainable technology marketplace with advanced filtering and real-time analytics dashboard.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project 2 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="mobile">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1592464491611-0ad7f73c5d8b?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">Mobile App</span>
+                                <h3 class="card-title">MindFlow Wellness</h3>
+                                <p class="card-description">Mental health tracking app with meditation guides and mood analytics.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">AI/ML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project 3 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">Branding</span>
+                                <h3 class="card-title">Ocean Brew Identity</h3>
+                                <p class="card-description">Complete brand identity for premium coffee roastery with sustainable packaging design.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">Illustrator</span>
+                                    <span class="tech-tag">Photoshop</span>
+                                    <span class="tech-tag">InDesign</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project 4 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">Website</span>
+                                <h3 class="card-title">FinanceFlow Dashboard</h3>
+                                <p class="card-description">Advanced financial analytics platform with interactive charts and real-time data visualization.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">D3.js</span>
+                                    <span class="tech-tag">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project 5 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="mobile">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">Mobile App</span>
+                                <h3 class="card-title">StudySync Platform</h3>
+                                <p class="card-description">Collaborative learning app with video calls, shared whiteboards, and progress tracking.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">WebRTC</span>
+                                    <span class="tech-tag">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project 6 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                        <div class="portfolio-card h-100">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&h=400&fit=crop');">
+                                <div class="card-overlay">
+                                    <button class="view-btn">
+                                        <i class="bi bi-arrow-up-right me-2"></i>View Project
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">Branding</span>
+                                <h3 class="card-title">GreenTech Startup</h3>
+                                <p class="card-description">Modern brand identity for renewable energy startup including logo, guidelines, and marketing materials.</p>
+                                <div class="card-technologies">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">After Effects</span>
+                                    <span class="tech-tag">Sketch</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         {{-- KONTAK --}}
         <div class="container py-5">

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\HeroSectionResource\Pages;
+use Filament\Forms\Components\FileUpload;
 use App\Filament\Resources\HeroSectionResource\RelationManagers;
 use App\Models\HeroSection;
 use Filament\Forms;
@@ -19,13 +20,19 @@ class HeroSectionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                FileUpload::make('image')
+                    ->label('Gambar Hero')
+                    ->image()
+                    ->directory('hero-images') // gambar disimpan di storage/app/public/hero-images
+                    ->required(),
             ]);
     }
+
 
     public static function table(Table $table): Table
     {

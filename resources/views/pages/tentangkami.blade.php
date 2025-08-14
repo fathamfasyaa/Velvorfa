@@ -304,7 +304,7 @@
         <div class="row g-4 justify-content-center">
             <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600">
                 <div class="card border-0 shadow-sm h-100 text-center">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member">
+                    <img src="{{ asset('assets/img/team/fathan.jpeg') }}" class="card-img-top" alt="Team Member">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">John Doe</h5>
                         <p class="card-text text-muted">Lead Developer</p>
@@ -313,9 +313,9 @@
             </div>
             <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
                 <div class="card border-0 shadow-sm h-100 text-center">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member">
+                    <img src="{{ asset('assets/img/team/fathan.jpeg') }}" class="card-img-top" alt="Team Member">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Jane Smith</h5>
+                        <h5 class="card-title fw-bold">Fathan Fasya Muhammad</h5>
                         <p class="card-text text-muted">UI/UX Designer</p>
                     </div>
                 </div>
