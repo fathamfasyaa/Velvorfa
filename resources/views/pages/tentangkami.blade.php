@@ -39,6 +39,7 @@
                       <div class="logo-glow"></div>
                       <img src="{{ asset('/assets/img/logovelvorfakecil.png') }}" 
                            alt="Logo Velvorfa" 
+                           loading="lazy"
                            class="img-fluid pb-4 floating-logo" 
                            style="max-width: 80px; position: relative; z-index: 2;">
                   </div>
@@ -304,7 +305,7 @@
         <div class="row g-4 justify-content-center">
             <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600">
                 <div class="card border-0 shadow-sm h-100 text-center">
-                    <img src="{{ asset('assets/img/team/fadli.jpeg') }}" class="card-img-top" alt="Team Member">
+                    <img src="{{ asset('assets/img/team/fadli.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Fadli Abdilah</h5>
                     </div>
@@ -312,7 +313,7 @@
             </div>
             <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
                 <div class="card border-0 shadow-sm h-100 text-center">
-                    <img src="{{ asset('assets/img/team/fathan.jpeg') }}" class="card-img-top" alt="Team Member">
+                    <img src="{{ asset('assets/img/team/fathan.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Fathan Fasya</h5>
                     </div>
@@ -320,7 +321,7 @@
             </div>
             <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
                 <div class="card border-0 shadow-sm h-100 text-center">
-                    <img src="{{ asset('assets/img/team/rifky.jpeg') }}" class="card-img-top" alt="Team Member">
+                    <img src="{{ asset('assets/img/team/rifky.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Rifky Madani</h5>
                     </div>

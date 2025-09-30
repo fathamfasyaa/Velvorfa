@@ -3,7 +3,7 @@
 
     <!-- Logo -->
     <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="{{ asset('/assets/img/logovelvorfakecil.png') }}" alt="Velvorfa Logo" class="logo-img">
+      <img src="{{ asset('/assets/img/logovelvorfakecil.png') }}" loading="lazy" alt="Velvorfa Logo" class="logo-img">
     </a>
 
     <!-- Centered Nav Menu -->

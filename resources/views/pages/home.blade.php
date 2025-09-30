@@ -39,7 +39,7 @@
                 @endphp
                 
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                    <img src="{{ $image }}" class="img-fluid animated">
+                    <img src="{{ $image }}" loading="lazy" class="img-fluid animated">
                 </div>
                 
                 
@@ -56,7 +56,7 @@
                 <div class="row align-items-center g-5">
                     <!-- Gambar Ilustrasi -->
                     <div class="col-lg-6" data-aos="fade-right">
-                        <img src="{{ asset('assets/img/aboutvelvorfa.png') }}" alt="Tentang Velvorfa"
+                        <img src="{{ asset('assets/img/aboutvelvorfa.png') }}" loading="lazy" alt="Tentang Velvorfa"
                             class="img-fluid rounded shadow-sm">
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
