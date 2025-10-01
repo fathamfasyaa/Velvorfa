@@ -1410,6 +1410,8 @@ section,
     font-weight: 600;
 }
 
+
+
 @media (max-width: 576px) {
     .custom-breadcrumb {
         margin: 5px;
@@ -1602,6 +1604,7 @@ section,
     justify-content: center;
 }
 
+
 @media (max-width: 991px) {
     .work-step-card {
         margin-bottom: 40px;
@@ -1618,15 +1621,35 @@ section,
     padding: 20px;
 }
 
-.team .card-img-top {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
+
+/* Team Card Image */
+.card-img-top {
+  width: 100%;
+  height: 350px;              /* tinggi fix biar seragam */
+  object-fit: cover;          /* biar rapi */
+  object-position: center;    /* fokus tengah */
+  transition: transform 0.4s ease; /* animasi halus */
 }
 
+/* Hover Zoom pada Foto */
+.card:hover .card-img-top {
+  transform: scale(1.05); /* zoom lembut */
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* naik sedikit */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* shadow lebih tegas */
+}
+
+
+
 @media (max-width: 768px) {
-    .team .card-img-top {
+    .card-img-top {
         height: 250px;
     }
 }
@@ -1852,14 +1875,15 @@ section,
 --------------------------------------------------------------*/
 @keyframes float {
     0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0.2;
+        transform: translateY(0px);
+        opacity: 0.8; /* bisa atur sesuai selera */
     }
     50% {
-        transform: translateY(-15px) rotate(180deg);
-        opacity: 0.4;
+        transform: translateY(-15px);
+        opacity: 1; /* biar makin hidup */
     }
 }
+
 
 @keyframes pulse {
     0% {

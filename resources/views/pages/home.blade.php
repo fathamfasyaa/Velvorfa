@@ -379,8 +379,8 @@
                                 <div>
                                     <h6 class="mb-1">Telepon</h6>
                                     <p class="text-muted mb-0">
-                                        <a href="tel:+6281234567890" class="text-decoration-none text-muted">
-                                            +62 812-3456-7890
+                                        <a href="tel:+6285860314877" class="text-decoration-none text-muted">
+                                            +62 858-6031-4877
                                         </a>
                                     </p>
                                 </div>
@@ -396,8 +396,8 @@
                                 <div>
                                     <h6 class="mb-1">Email</h6>
                                     <p class="text-muted mb-0">
-                                        <a href="mailto:info@perusahaan.com" class="text-decoration-none text-muted">
-                                            info@perusahaan.com
+                                        <a href="mailto:velvorfa@gmail.com" class="text-decoration-none text-muted">
+                                            velvorfa@gmail.com
                                         </a>
                                     </p>
                                 </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami - Velvorfa')
+@section('title', '- Tentang Kami')
 @section('description', 'Kenali lebih dekat Velvorfa, mitra digital untuk UMKM dan bisnis lokal.')
 @section('keywords', 'tentang velvorfa, web developer lokal, solusi digital UMKM')
 
@@ -44,13 +44,6 @@
                            style="max-width: 80px; position: relative; z-index: 2;">
                   </div>
                   
-                  <!-- Subtitle with Animation -->
-                  <h6 class="text-light fs-6 fw-light mb-3 subtitle" 
-                      data-aos="fade-up" 
-                      data-aos-duration="1000" 
-                      data-aos-delay="400">
-                      Tentang Velvorfa
-                  </h6>
                   
                   <!-- Main Title with Shimmer Effect -->
                   <h2 class="fs-1 fw-bold text-light main-title mb-4" 
@@ -160,7 +153,7 @@
 <section id="background" class="py-4">
     <div class="container">
         <div class="text-center mb-4" data-aos="fade-up">
-            <h2 class="fw-bold text-white mb-2">Bagaimana Kami Bekerja</h2>
+            <h2 class="fw-bold text-white pt-4 mb-3">Bagaimana Kami Bekerja</h2>
             <p class="text-white-50">Proses kerja yang terstruktur untuk hasil maksimal</p>
             <div class="mt-3">
                 <div class="d-inline-flex align-items-center gap-2">
@@ -249,37 +242,8 @@
             </div>
         </div>
 
-        <!-- Process Timeline -->
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="process-timeline" data-aos="fade-up" data-aos-duration="800">
-                    <div class="timeline-container">
-                        <div class="timeline-line"></div>
-                        <div class="timeline-steps">
-                            <div class="timeline-step active" data-step="1">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Konsultasi</span>
-                            </div>
-                            <div class="timeline-step" data-step="2">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Desain</span>
-                            </div>
-                            <div class="timeline-step" data-step="3">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Development</span>
-                            </div>
-                            <div class="timeline-step" data-step="4">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Launch</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- CTA Section -->
-        <div class="text-center mt-4 pb-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+        <div class="text-center pt-5 pb-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
             <h4 class="text-white fw-bold mb-2">Siap Memulai Proyek Anda?</h4>
             <p class="text-white-50 mb-3">Mari diskusikan kebutuhan digital bisnis Anda bersama tim expert kami</p>
             <a href="#" class="btn btn-light btn-lg px-4 py-2 rounded-pill fw-bold">
@@ -303,27 +267,27 @@
         </div>
         
         <div class="row g-4 justify-content-center">
-            <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600">
+            <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-duration="600">
                 <div class="card border-0 shadow-sm h-100 text-center">
                     <img src="{{ asset('assets/img/team/fadli.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Fadli Abdilah</h5>
+                        <h5 class="card-title fw-bold">Muhammad Fadli Abdilah</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+            <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
                 <div class="card border-0 shadow-sm h-100 text-center">
                     <img src="{{ asset('assets/img/team/fathan.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Fathan Fasya</h5>
-                    </div>
+                        <h5 class="card-title fw-bold">Fathan Fasya Muhammad</h5>
+                    </div> 
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+            <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
                 <div class="card border-0 shadow-sm h-100 text-center">
                     <img src="{{ asset('assets/img/team/rifky.jpeg') }}" loading="lazy" class="card-img-top" alt="Team Member">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Rifky Madani</h5>
+                        <h5 class="card-title fw-bold">Muhammad Rifky Madani</h5>
                     </div>
                 </div>
             </div>
