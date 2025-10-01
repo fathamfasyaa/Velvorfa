@@ -40,7 +40,7 @@
             <div class="col-lg-2 col-md-6">
                 <h6>Follow Us</h6>
                 <div class="social-links">
-                    <a href="#" class="social-link" title="Instagram">
+                    <a href="https://www.instagram.com/velvorfa?igsh=MWdrN2kwbmd2enVpMg==" class="social-link" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="#" class="social-link" title="LinkedIn">

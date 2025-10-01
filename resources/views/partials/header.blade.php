@@ -31,7 +31,7 @@
       <div class="header-social-links-mobile d-xl-none mt-3 px-3">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/velvorfa?igsh=MWdrN2kwbmd2enVpMg==" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -41,7 +41,7 @@
     <div class="header-social-links d-none d-xl-flex">
       <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.instagram.com/velvorfa?igsh=MWdrN2kwbmd2enVpMg==" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
   </div>

@@ -427,7 +427,7 @@
                                 <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
                                     <i class="fab fa-facebook fa-lg"></i>
                                 </a>
-                                <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
+                                <a href="https://www.instagram.com/velvorfa?igsh=MWdrN2kwbmd2enVpMg==" class="me-3 text-decoration-none" style="color: #0F4C5C;">
                                     <i class="fab fa-instagram fa-lg"></i>
                                 </a>
                                 <a href="#" class="me-3 text-decoration-none" style="color: #0F4C5C;">
