@@ -1263,6 +1263,8 @@ section,
 .card-technologies {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
     gap: 8px;
 }
 
