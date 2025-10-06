@@ -1,17 +1,13 @@
 <footer class="footer">
     <!-- Floating Animation Elements -->
-    <div class="floating-elements">
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-    </div>
+    
     
     <div class="container footer-content">
         <div class="row g-4">
             <!-- Company Info -->
             <div class="col-lg-4 col-md-6">
-                <h6>Velvorfa</h6>
-                <p>Solusi digital terdepan dengan inovasi berkelanjutan untuk masa depan yang lebih baik.</p>
+                <img src="{{ asset('assets/img/logovelvorfa.png') }}" alt="Company Logo" class="img-fluid mb-3" style="width: 150px;">
+                <p class="">Solusi digital terdepan dengan inovasi berkelanjutan untuk masa depan yang lebih baik.</p>
             </div>
 
             <!-- Quick Links -->
