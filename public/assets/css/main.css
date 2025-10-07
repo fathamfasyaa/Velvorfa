@@ -372,7 +372,7 @@ img {
     cursor: pointer;
     transition: transform 0.3s;
     order: 3;
-    margin-left: auto;
+    margin-left: auto !important;
 }
 
 .mobile-nav-toggle:hover {
