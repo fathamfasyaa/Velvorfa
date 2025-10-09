@@ -58,6 +58,8 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('assets/js/main.js') }}"></script> --}}
 
+    
+
     <!-- AOS Init -->
     <script>
         AOS.init({
